@@ -38,3 +38,18 @@ GROQ_API_KEY = "gsk_your_key_here"
 ```
 
 Do not commit API keys or `secrets.toml`.
+
+## Deploy on Streamlit Community Cloud
+
+1. Push `app.py`, `requirements.txt`, and `.streamlit/config.toml` to GitHub.
+2. Create the app in Streamlit Community Cloud and choose `app.py` as the entrypoint.
+3. In **Advanced settings**, select **Python 3.12**.
+4. Add the following in the **Secrets** field:
+
+   ```toml
+   GROQ_API_KEY = "gsk_your_key_here"
+   ```
+
+5. Deploy or reboot the app.
+
+If the app was originally created with a different Python version, delete and redeploy it to change the Python version.
